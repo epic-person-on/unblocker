@@ -1,4 +1,4 @@
-name: test
+name: Test
 
 on: [push]
 
@@ -20,7 +20,7 @@ jobs:
         pnpm install 2>&1 | tee install.log
       continue-on-error: true
 
-    - name: Test Start
+    - name: Test start application
       run: |
         echo "Starting application..."
         pnpm start > start.log 2>&1 &
@@ -28,13 +28,17 @@ jobs:
         sleep 10
       continue-on-error: true
 
-    - name: Check application status
+    - name: Print logs
       run: |
+        echo "Installation logs:"
+        cat install.log
+        echo "Application start logs:"
+        cat start.log
+        # Optionally, you could use exit status checks here if needed
         if grep -q "error" start.log; then
-          echo "Application start error detected:"
-          cat start.log
+          echo "Errors detected during application start."
           exit 1
         fi
 
-    - name: Exit When Done
+    - name: Exit
       run: exit 0
