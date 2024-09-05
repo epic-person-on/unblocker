@@ -1,0 +1,40 @@
+name: test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8 # specify the version of pnpm you need
+
+    - name: Install dependencies
+      run: |
+        echo "Installing dependencies..."
+        pnpm install 2>&1 | tee install.log
+      continue-on-error: true
+
+    - name: Test Start
+      run: |
+        echo "Starting application..."
+        pnpm start > start.log 2>&1 &
+        # Ensure the application starts correctly
+        sleep 10
+      continue-on-error: true
+
+    - name: Check application status
+      run: |
+        if grep -q "error" start.log; then
+          echo "Application start error detected:"
+          cat start.log
+          exit 1
+        fi
+
+    - name: Exit When Done
+      run: exit 0
