@@ -124,11 +124,8 @@ app.use(express.static(path.join(__dirname, "static")));
 app.use("/ov", cors({ origin: true }));
 
 const routes = [
-  { path: "/as", file: "apps.html" },
-  { path: "/gm", file: "games.html" },
   { path: "/st", file: "settings.html" },
   { path: "/ta", file: "tabs.html" },
-  { path: "/ts", file: "tools.html" },
   { path: "/", file: "index.html" },
   { path: "/tos", file: "tos.html" },
   { path: "/privacy", file: "privacy.html" },
