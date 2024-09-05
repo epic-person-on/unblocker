@@ -5,7 +5,7 @@ try {
 } catch (e) {
   inFrame = true;
 }
-if (!localStorage.getItem("ab")) localStorage.setItem("ab", true);
+if (!localStorage.getItem("ab")) localStorage.setItem("ab", false);
 if (
   !inFrame &&
   !navigator.userAgent.includes("Firefox") &&
