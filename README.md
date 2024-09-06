@@ -1,5 +1,5 @@
 <div style="display: flex; justify-content: center;" width="100%">
-  <div>
+  <div style='text-align:center'>
     <h1>Unblocker</h1>
     <br>
     <h2>Server Deployment</h2>
