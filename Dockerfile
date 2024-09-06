@@ -1,12 +1,22 @@
-FROM node:bookworm-slim
+FROM node:20
+
 ENV NODE_ENV=production
 
-WORKDIR /app
+# Set the working directory inside the container
+WORKDIR /usr/src/app
 
-COPY ["package.json", "./"]
+# Copy package.json and package-lock.json first to leverage Docker cache
+COPY package*.json ./
 
+# Install the project dependencies
 RUN npm install
 
+# Copy the rest of the application code into the container
 COPY . .
 
-CMD [ "node", "index.js" ]
+# Expose the port that the application will run on
+EXPOSE 8080
+
+# Command to run the application
+CMD ["node", "index.js"]
+
