@@ -1,4 +1,3 @@
-// if statement hell featuring a stupid amount of functions
 
 // Utility Functions
 function Popup() {
@@ -49,7 +48,7 @@ function handleFileChange(event) {
 
 function resetBackground() {
   localStorage.removeItem("backgroundImage");
-  const defaultBackground = "./assets/media/background/full-main.png";
+  const defaultBackground = "./assets/media/background/full-main.webp";
   setBackgroundImage(defaultBackground);
 }
 
@@ -132,7 +131,7 @@ function saveTheme() {
   const themeData = {
     background:
       document.querySelector("#background-input").value ||
-      "url('/./assets/media/background/full-main.png')",
+      "url('/./assets/media/background/full-main.webp')",
     backgroundColor:
       document.querySelector("#background-color-input").value || "#222",
     inputColor: document.querySelector("#input-color-input").value || "#4545459e",
@@ -183,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#black-button").addEventListener("click", resetBackground);
 
   document.querySelector("#white-button").addEventListener("click", () => {
-    const whiteBackgroundUrl = "./assets/media/background/full-inverted.png";
+    const whiteBackgroundUrl = "./assets/media/background/full-inverted.webp";
     localStorage.setItem("backgroundImage", whiteBackgroundUrl);
     setBackgroundImage(whiteBackgroundUrl);
   });
