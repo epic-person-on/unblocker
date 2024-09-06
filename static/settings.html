@@ -18,56 +18,6 @@
   <body>
     <div class="fixed-nav-bar"></div>
     <div class="main">
-      <div class="popup">
-        <h3>Theme Creator</h3>
-        <button class="export" id="export-theme">Export CSS</button>
-        <button class="import" id="import-theme-button">Import CSS</button>
-        <p>Change the background image</p>
-        <input
-          type="text"
-          id="background-input"
-          placeholder="Enter image URL"
-        />
-        <button class="green" id="save-button">Save Image</button>
-        <button id="upload-button">Upload Image</button>
-        <button id="black-button">Black Background</button>
-        <button id="white-button">White Background</button>
-        <button class="red" id="reset-button">Reset</button>
-        <p>Change the background color</p>
-        <input type="text" class="input-small" id="background-color-input" />
-        <p>Change the searchbar/input color</p>
-        <input type="text" class="input-small" id="input-color-input" />
-        <p>Change the app card color</p>
-        <input type="text" class="input-small" id="app-card-color-input" />
-        <p>Change the settings card color</p>
-        <input type="text" class="input-small" id="settings-card-color-input" />
-        <p>Change the color of buttons</p>
-        <input type="text" class="input-small" id="button-color-input" />
-        <p>Change the accent color of tabs</p>
-        <input type="text" class="input-small" id="tab-accent-color-input" />
-        <p>Change the background color of turned on sliders</p>
-        <input type="text" class="input-small" id="slider-active-color-input" />
-        <p>Change the background color of turned off sliders</p>
-        <input
-          type="text"
-          class="input-small"
-          id="slider-inactive-color-input"
-        />
-        <p>Change the color of our icon on the nav bar</p>
-        <button id="white-logo">White Logo</button>
-        <button id="black-logo">Black Logo</button>
-        <p>Change the primary color of text (Default Color: White)</p>
-        <input type="text" class="input-small" id="primary-text-color-input" />
-        <p>Change the color of dark text (Default Color: Gray)</p>
-        <input type="text" class="input-small" id="dark-text-color-input" />
-        <p>Change the color of placeholder text (Default Color: Light Gray)</p>
-        <input
-          type="text"
-          class="input-small"
-          id="placeholder-text-color-input"
-        />
-        <button onclick="ClosePopup()" id="save-theme">Save Theme</button>
-      </div>
       <div class="settings-container">
         <div class="settings-card">
           <h3>About:Blank</h3>
@@ -219,12 +169,8 @@
         <div class="settings-card">
           <h3>Customization</h3>
           <p>
-            Change the theme, create your own custom theme, or just change the
+            Change the theme or just change the
             background image.
-          </p>
-          <p>
-            Custom Themes are currently broken, we are working to fix this as
-            soon as possible
           </p>
           <button
             class="key-button"
@@ -260,11 +206,6 @@
         </div>
         <div class="settings-card">
           <h3>Choose your <an>Pro</an>xy</h3>
-          <p>
-            Ultra<an>vio</an>let is the main <an>pro</an>xy, but Dynamic is
-            faster and supports more sites. (Dynamic is still in beta, so expect
-            some bugs.)
-          </p>
           <select id="pChange">
             <option value="uv">Ultraviolet (Default)</option>
             <option value="dy">Dynamic</option>
