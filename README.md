@@ -1,5 +1,5 @@
 <div align='center'>
-  <h1 style='font-size: 40px'><strong>Unblocker</strong></h1>
+  <h1 style='font-size: 40px'>Unblocker</h1>
   <br>
   <h2>Server Deployment</h2>
   <code>pnpm i && pnpm start</code>
