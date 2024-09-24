@@ -213,9 +213,9 @@ function dataUrItoBlob(dataUri) {
 document.addEventListener("DOMContentLoaded", () => {
   function adChange(selectedValue) {
     if (selectedValue === "default") {
-      localStorage.setItem("ads", "on");
+      localStorage.setItem("ads", "off");
     } else if (selectedValue === "popups") {
-      localStorage.setItem("ads", "popups");
+      localStorage.setItem("ads", "off");
     } else if (selectedValue === "off") {
       localStorage.setItem("ads", "off");
     }
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (storedAd === "on") {
       adTypeElement.value = "default";
     } else if (storedAd === "popups") {
-      adTypeElement.value = "popups";
+      adTypeElement.value = "off";
     } else if (storedAd === "off") {
       adTypeElement.value = "off";
     } else {
