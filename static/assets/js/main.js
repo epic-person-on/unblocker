@@ -149,6 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Naviance Student",
       icon: "/assets/media/favicon/naviance.png",
     },
+    MyPlan: {
+      name: "MyPLAN",
+      icon: "/assets/media/favicon/myplan.png",
+    },
     "PBS Learning Media": {
       name: "PBS LearningMedia | Teaching Resources For Students And Teachers",
       icon: "/assets/media/favicon/pbslearningmedia.ico",
