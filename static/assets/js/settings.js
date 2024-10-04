@@ -502,7 +502,6 @@ function EngineChange(dropdown) {
     DuckDuckGo: "https://duckduckgo.com/?q=",
     Qwant: "https://www.qwant.com/?q=",
     Startpage: "https://www.startpage.com/search?q=",
-    SearchEncrypt: "https://www.searchencrypt.com/search/?q=",
     Ecosia: "https://www.ecosia.org/search?q=",
   };
 
