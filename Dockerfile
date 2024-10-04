@@ -1,5 +1,8 @@
 FROM node:bookworm-slim
 
+# Add a label for Github
+LABEL org.opencontainers.image.description "A Dockerized version of the Unblocker proxy."
+
 # Set environment variable for production
 ENV NODE_ENV=production
 
