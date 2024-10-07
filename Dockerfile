@@ -17,7 +17,7 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-EXPOSE 8080
+EXPOSE 80
 
 # Command to run the application
-CMD [ "node", "index.js" ]
+CMD [ "sudo PORT=80 npm start" ]
