@@ -5,7 +5,6 @@ LABEL org.opencontainers.image.description="A Dockerized version of the Unblocke
 
 # Set environment variable for production
 ENV NODE_ENV=production
-ENV PORT=80
 
 # Set the working directory
 WORKDIR /app
@@ -14,13 +13,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --production
+RUN npm install 
 
 # Copy the rest of the application code
 COPY . .
 
 # Expose the application port
-EXPOSE 80
+EXPOSE 8080
 
 # Command to run the application
 CMD ["npm", "start"]
