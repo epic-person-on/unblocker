@@ -1,10 +1,11 @@
 FROM node:bookworm-slim
 
-# Add a label for Github
-LABEL org.opencontainers.image.description "A Dockerized version of the Unblocker proxy."
+# Add a label for GitHub
+LABEL org.opencontainers.image.description="A Dockerized version of the Unblocker proxy."
 
 # Set environment variable for production
 ENV NODE_ENV=production
+ENV PORT=80
 
 # Set the working directory
 WORKDIR /app
@@ -12,12 +13,14 @@ WORKDIR /app
 # Copy only package.json and package-lock.json (if available)
 COPY package*.json ./
 
-RUN npm install 
+# Install dependencies
+RUN npm install --production
 
 # Copy the rest of the application code
 COPY . .
 
+# Expose the application port
 EXPOSE 80
 
 # Command to run the application
-CMD [ "sudo PORT=80 npm start" ]
+CMD ["npm", "start"]
